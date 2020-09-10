@@ -27,7 +27,6 @@ RUN conda install mamba -y --quiet -c conda-forge \
         pydot \
         lxml \
         geojson \
-        proj4 \
         pydap \
         xarray \
         cartopy \
@@ -35,7 +34,6 @@ RUN conda install mamba -y --quiet -c conda-forge \
     && conda clean --all
 
 RUN pip install shortid \
-                nbgitpuller \
-                git+https://github.com/enolfc/egi-hub-addons
+                nbgitpuller
 
 RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-leaflet
